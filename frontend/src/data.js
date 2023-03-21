@@ -1,20 +1,20 @@
 const data = {
   products: [
     {
-      name: "Nike",
+      name: "Nikeasdasd",
       slug: "nike-shirt",
       category: "Shirts",
       image: "/images/remera.jpg",
       price: 120,
-      stock: 10,
+      stock: 0,
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
       description: "sdadasdasd",
     },
     {
-      name: "Nike",
-      slug: "nike-shirt",
+      name: "Nikesssss",
+      slug: "nike-shirtt",
       category: "Shirts",
       image: "/images/remera.jpg",
       price: 120,
@@ -26,7 +26,7 @@ const data = {
     },
     {
       name: "Nike",
-      slug: "nike-shirt",
+      slug: "nike-shirttt",
       category: "Shirts",
       image: "/images/remera.jpg",
       price: 120,
@@ -37,8 +37,8 @@ const data = {
       description: "sdadasdasd",
     },
     {
-      name: "Nike",
-      slug: "nike-shirt",
+      name: "Nikeeeeeeeeee",
+      slug: "nike-shirtttt",
       category: "Shirts",
       image: "/images/remera.jpg",
       price: 120,
