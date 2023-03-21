@@ -2,7 +2,7 @@ const data = {
   products: [
     {
       name: "Nikeasdasd",
-      slug: "nike-shirt",
+      slug: "asdasdadsad",
       category: "Shirts",
       image: "/images/remera.jpg",
       price: 120,
@@ -14,7 +14,7 @@ const data = {
     },
     {
       name: "Nikesssss",
-      slug: "nike-shirtt",
+      slug: "sssssssss",
       category: "Shirts",
       image: "/images/remera.jpg",
       price: 120,
@@ -26,7 +26,7 @@ const data = {
     },
     {
       name: "Nike",
-      slug: "nike-shirttt",
+      slug: "naaaaaaaaaa",
       category: "Shirts",
       image: "/images/remera.jpg",
       price: 120,
@@ -38,7 +38,7 @@ const data = {
     },
     {
       name: "Nikeeeeeeeeee",
-      slug: "nike-shirtttt",
+      slug: "hghghgghhgh",
       category: "Shirts",
       image: "/images/remera.jpg",
       price: 120,
