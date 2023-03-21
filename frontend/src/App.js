@@ -1,21 +1,34 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./screen/Home";
 import Detail from "./screen/Detail";
-import { Link } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import { LinkContainer } from "react-router-bootstrap";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="d-flex flex-column site-container">
         <header className="App-header">
-          <Link to="/">Amazon</Link>
+          <Navbar bg="dark" variant="dark">
+            <Container>
+              <LinkContainer to="/">
+                <Navbar.Brand>Amazon</Navbar.Brand>
+              </LinkContainer>
+            </Container>
+          </Navbar>
         </header>
         <main>
-          <Routes>
-            <Route path="/product/:slug" element={<Detail />} />
-            <Route path="/" element={<Home />} />
-          </Routes>
+          <Container>
+            <Routes>
+              <Route path="/product/:slug" element={<Detail />} />
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Container>
         </main>
+        <footer>
+          <div className="text-center">All rights reserved</div>
+        </footer>
       </div>
     </BrowserRouter>
   );
