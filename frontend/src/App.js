@@ -38,10 +38,10 @@ function App() {
         <main>
           <Container className="mt-3">
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route path="/product/:slug" element={<Detail />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/signin" element={<SignScreen />} />
-              <Route path="/" element={<Home />} />
             </Routes>
           </Container>
         </main>
