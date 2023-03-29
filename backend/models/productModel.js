@@ -1,6 +1,6 @@
-import moongose from "mongoose";
+import mongoose from "mongoose";
 
-const productSchema = new moongose.Schema(
+const productSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, unique: true },
     slug: { type: String, required: true, unique: true },
@@ -18,5 +18,5 @@ const productSchema = new moongose.Schema(
   }
 );
 
-const Product = moongose.model("Product", productSchema);
+const Product = mongoose.model("Product", productSchema);
 export default Product;

@@ -1,6 +1,6 @@
-import moongose from "mongoose";
+import mongoose from "mongoose";
 
-const userSchema = new moongose.Schema(
+const userSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
@@ -12,5 +12,5 @@ const userSchema = new moongose.Schema(
   }
 );
 
-const User = moongose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
 export default User;
