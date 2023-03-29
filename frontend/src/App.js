@@ -1,6 +1,6 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'
+import "react-toastify/dist/ReactToastify.css";
 import Home from "./screen/Home";
 import Detail from "./screen/Detail";
 import Navbar from "react-bootstrap/Navbar";
@@ -14,6 +14,8 @@ import { Store } from "./Store";
 import CartScreen from "./screen/CartScreen";
 import SignScreen from "./screen/SignScreen";
 import AdressScreen from "./screen/AdressScreen";
+import SignUpScreen from "./screen/SignUpScreen";
+import PaymentScreen from "./screen/PaymentScreen";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -22,7 +24,8 @@ function App() {
   const signoutHandler = () => {
     ctxDispatch({ type: "USER_SIGNOUT" });
     localStorage.removeItem("userInfo");
-    localStorage.removeItem("shippingAddress")
+    localStorage.removeItem("shippingAddress");
+    localStorage.removeItem("paymentMethod");
   };
 
   return (
@@ -73,11 +76,13 @@ function App() {
         <main>
           <Container className="mt-3">
             <Routes>
-              <Route path="/" element={<Home />} />
               <Route path="/product/:slug" element={<Detail />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/signin" element={<SignScreen />} />
-              <Route path="/signin" element={<AdressScreen />} />
+              <Route path="/signup" element={<SignUpScreen />} />
+              <Route path="/shipping" element={<AdressScreen />} />
+              <Route path="/payment" element={<PaymentScreen />} />
+              <Route path="/" element={<Home />} />
             </Routes>
           </Container>
         </main>
