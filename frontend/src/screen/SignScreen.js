@@ -7,7 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Store } from "../Store";
 import { toast } from "react-toastify";
-import { getError } from "../utils";
+// import { getError } from "../utils";
 
 function SignInScreen() {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ function SignInScreen() {
       localStorage.setItem("userInfo", JSON.stringify(data));
       navigate(redirect || "/");
     } catch (err) {
-      toast.error(getError(err));
+      toast.error('Invalid email or password');
     }
   };
 
