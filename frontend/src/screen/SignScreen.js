@@ -7,6 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Store } from "../Store";
 import { toast } from "react-toastify";
+import { getError } from "../utils";
 // import { getError } from "../utils";
 
 function SignInScreen() {
@@ -24,7 +25,7 @@ function SignInScreen() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await Axios.get("/api/users/signin", {
+      const { data } = await Axios.post("/api/users/signin", {
         email,
         password,
       });
@@ -33,7 +34,7 @@ function SignInScreen() {
       navigate(redirect || "/");
       console.log(data)
     } catch (err) {
-      toast.error('Invalid email or password');
+      toast.error(getError(err));
     }
   };
 
